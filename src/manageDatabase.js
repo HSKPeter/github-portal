@@ -47,8 +47,7 @@ async function initDB(port) {
     // no records, so let's add a couple
     const userRecords = "insert into users (last_name, first_name, email, password) values ?";
     const recordValues = [
-      ["Hui", "Peter", "peterhui@mail.com", "Abcd1234"],
-      ["test", "user", "testuser@mail.com", "Abcd1234"],
+      ["Hello", "World", "user@mail.com", "Abcd1234"],
     ];
     await connection.query(userRecords, [recordValues]);
 
