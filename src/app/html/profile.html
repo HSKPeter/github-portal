@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | GitHub Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/profile.css">
+
+</head>
+
+<body>
+    <div id="gridContainer">
+        <nav id="navbar">
+            <div id="githubLogoContainer">
+                <img src="svg/github-icon.svg" alt="GitHub logo" id="githubLogo">
+            </div>
+            <div id="logout">
+                <a href="/logout">Log out</a>
+            </div>
+        </nav>
+        <div id="mainContainer">
+            <div id="contentContainer">
+                <section id="profileSection">
+                    <h2>My Profile</h2>
+                    <div id="profileGrid">
+                        <div class="gridHeader">Last Name</div>
+                        <div id="userLastName"></div>
+                        <div class="gridHeader">First Name</div>
+                        <div id="userFirstName"></div>
+                        <div class="gridHeader">Email</div>                        
+                        <div id="userEmail"></div>
+                        <!-- <div><button class="lightWhiteButton">Edit</button></div>
+                        <div><button class="lightWhiteButton">Edit</button></div>
+                        <div><button class="lightWhiteButton">Edit</button></div> -->
+                    </div>
+                </section>
+                <section id="addSubscriptionsSection">
+                    <h2>Subscribe GitHub Users</h2>
+                    <form id="searchGitHubUsers">
+                        <input type="text" id="searchBar" placeholder="Search by username" autocomplete="off" required>
+                        <button type="submit" id="searchButton">
+                            <i class="material-icons text-secondary-color-scheme" id="searchIcon">search</i>
+                        </button>
+                    </form>
+                    <div class="subscriptionsContainer" id="searchResults">
+                    </div>
+                </section>
+                <section id="subscriptionSection">
+                    <h2>My GitHub Subscriptions</h2>
+                    <div id="subscriptionsContainer">
+                    </div>
+                </section>
+                <section id="feedsSection">
+                    <h2>Repositories Feeds</h2>
+                    <div id="setDayRange">
+                        Updated within the last
+                        <select id="dayRange">
+                            <option value="2" selected>2</option>
+                            <option value="7">7</option>
+                            <option value="14">14</option>
+                            <option value="30">30</option>
+                            <option value="100">100</option>
+                            <option value="365">365</option>
+                        </select>
+                        days
+                    </div>
+                    <div id="feedsContainer">
+                    </div>
+                </section>
+                
+
+            </div>
+        </div>
+    </div>
+    <script type="module" src="js/formatData.js"></script>
+    <script type="module" src="js/getDataFromBackend.js"></script>
+    <script type="module" src="js/sendDataToBackend.js"></script>
+    <script type="module" src="js/searchGitHubUsers.js"></script>
+    <script type="module" src="js/fetchGitHubRepos.js"></script>
+</body>
+
+</html>

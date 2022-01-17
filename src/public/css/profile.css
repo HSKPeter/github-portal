@@ -1,0 +1,279 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#gridContainer {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 10% 90%;
+    grid-template-columns: 100%;
+}
+
+#githubLogoContainer {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+#mainContainer {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 15% 70% 15%;
+    height: fit-content;
+}
+
+#contentContainer {
+    grid-row: 1;
+    grid-column: 2;
+}
+
+#loginForm {
+    height: 100%;
+}
+
+#githubLogo {
+    height: 80%;
+    margin-left: 2rem;
+}
+
+#navbar {
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 30% 10% 60%;
+    background-color: rgb(248, 249, 250);
+    min-height: 60px;
+}
+
+#profileGrid {
+    display: grid;
+    width: 100%;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 8rem 20rem
+}
+
+.gridHeader {
+    font-weight: bold;
+}
+
+section:not(#profileSection) {
+    margin-top: 5rem;
+}
+
+/* Reference: https://newbedev.com/css-css-remove-button-default-style-code-example */
+button {
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+    background-color: rgb(83, 161, 88);
+    padding: 8px 12px;
+    border-radius: 4px;
+    color: white;
+    border: 2px solid rgb(75, 142, 80);
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(75, 142, 80);
+}
+
+.lightWhiteButton {
+    background-color: rgb(246, 248, 250);
+    color: rgb(34, 38, 42);
+    border: 1px solid rgb(213, 216, 218);
+}
+
+.lightWhiteButton:hover {
+    background-color: #eaeef2;
+}
+
+#subscriptionsContainer {
+    width: 100%;
+}
+
+section h2 {
+    margin-bottom: 0.5rem;
+}
+
+.subscriptionItem {
+    display: inline-block;
+    border: 2px solid #DDDDDD;
+    padding: 2px 10px;
+    margin: 4px;
+    border-radius: 10px;
+}
+
+.subscriptionItem:hover {
+    background-color: rgb(246, 248, 250);
+    border: 2px solid #AAAAAA;
+    /* color: white; */
+    cursor: pointer;
+}
+
+#logout {
+    grid-row: 1;
+    grid-column: 3;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 6%;
+    text-align: center;
+}
+
+#logout a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.material-icons {
+    font-size: 12px;
+}
+
+#searchIcon {
+    font-size: 0.8rem;
+}
+
+input[type=text] {
+    border: 2px solid grey;
+    border-radius: 4px;
+    padding: 0.4rem;
+    font-size: 1rem;
+    width: 16rem;
+}
+
+#searchResults {
+    margin-top: 1rem;
+}
+
+.addIcon:hover {
+    background-color: rgb(83, 161, 88);
+    color: #FFFFFF;
+    border-radius: 4px;
+}
+
+.clearIcon:hover {
+    background-color: rgb(190, 53, 54);
+    color: #FFFFFF;
+    border-radius: 4px;
+}
+
+#searchResults {
+    min-height: 8rem;
+}
+
+.repositoryFeed {
+    display: grid;
+    grid-template-rows: 85% 15%;
+    grid-template-columns: 100%;
+    border: 2px solid #DDDDDD;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;;
+    margin: 0.25rem;
+}
+
+.repositoryName {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: 0.2rem;
+}
+
+.repositoryName:hover {
+    text-decoration: underline;
+}
+
+.gitHubProfilePicInRepos {
+    max-height: 20px;
+    margin-right: 4px;
+}
+
+.gitHubRepoOwnerName {
+    font-size: 12px;
+}
+
+.repoOwnerInfo {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: auto;
+}
+
+#setDayRange {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#feedsContainer{
+    display: grid;
+    grid-auto-rows: 16rem;
+    grid-template-columns: repeat(4, 25%);
+}
+
+.subscriptionItem a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.subscriptionItem a:hover {
+    text-decoration: underline;
+}
+
+.repositoryDescription {
+    overflow-y: auto;
+}
+
+.gitHubRepoOwnerName {
+    text-decoration: none;
+    color: inherit;
+}
+
+.gitHubRepoOwnerName:hover {
+    text-decoration: underline;
+}
+
+.repositoryDetailsContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+@media (max-width: 1400px) {
+    #feedsContainer{
+        grid-template-columns: repeat(3, 33%);
+    }
+}
+
+@media (max-width: 992px) {
+    #feedsContainer{
+        grid-template-columns: repeat(2, 50%);
+    }
+}
+
+@media (max-width: 768px) {
+    #feedsContainer{
+        grid-template-columns: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    #searchGitHubUsers{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #searchButton {
+        margin-top: 10px;
+    }
+
+    #searchBar {
+        width: 90%;
+    }
+}
+
